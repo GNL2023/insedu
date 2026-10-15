@@ -1,0 +1,40 @@
+name: Deploy Small Sounds to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "insect-listening-exhibit/**"
+      - ".github/workflows/deploy-insect-exhibit.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "small-sounds-pages"
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload exhibit site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "./insect-listening-exhibit"
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
