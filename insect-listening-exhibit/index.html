@@ -32,6 +32,38 @@ footer{background:#e9eddf;padding:1.5rem max(1rem,calc((100vw - 1080px)/2));font
 <article class="sound-card"><div class="illustration" aria-hidden="true">🪲</div><h3>Beetle clicks</h3><p>Some insects produce clicks, squeaks, or other signals. Recording method and species matter.</p><button class="primary demo" data-kind="beetle">▶ Play demo</button></article>
 <article class="sound-card"><div class="illustration" aria-hidden="true">🍃</div><h3>Leaf-level listening</h3><p>Feeding and movement may create tiny sounds. Contact microphones can reveal subtle vibrations.</p><button class="primary demo" data-kind="leaf">▶ Play demo</button></article>
 </div>
+
+<section class="panel" style="margin-top:1rem" id="diy-contact-mic">
+<h2>DIY lab: build a contact microphone</h2>
+<p>A contact microphone picks up vibrations moving through a solid surface. It can help reveal tiny taps and scrapes that an ordinary air microphone may miss. This guide is a beginner-friendly prototype, not a calibrated insect detector.</p>
+<div class="live">
+<div>
+<h3>What you need</h3>
+<ul>
+<li>One piezo disc sensor (about 20–35 mm)</li>
+<li>Two-conductor shielded cable</li>
+<li>A compatible high-impedance audio input, recorder, or piezo preamp</li>
+<li>Insulating tape or heat-shrink tubing and a small plastic enclosure</li>
+<li>A soft elastic band or removable putty to hold the sensor against a surface</li>
+</ul>
+<p class="muted">For the easiest setup, use a ready-made piezo contact microphone or a piezo preamp with a suitable cable. Input connectors vary; check the recorder/interface instructions before connecting bare wires.</p>
+</div>
+<div>
+<h3>Build and test</h3>
+<ol>
+<li>Connect the piezo disc’s two terminals to the cable’s signal conductor and ground/shield, following the sensor and input-device instructions.</li>
+<li>Insulate each connection so the terminals cannot touch each other, then secure the disc and cable in a small enclosure to reduce strain.</li>
+<li>Connect it to a compatible high-impedance input. Start with the input gain low and raise it gradually.</li>
+<li>Gently press the sensor against a dry twig, fallen leaf, or wooden surface. Tap the surface lightly and listen through headphones.</li>
+</ol>
+</div>
+</div>
+<h3>Try this listening experiment</h3>
+<p>Compare a dry twig, a piece of cardboard, and a wooden table. Keep the sensor position and gain similar. Which surface carries the clearest vibration? Record your observations, and label them as your own test sounds—not insect calls.</p>
+<p class="note"><b>Care and safety:</b> Do not pierce, cut, or tightly clamp living plants, disturb insects, or attach the sensor to an animal. Keep electronics dry. Never connect bare piezo wires to an unknown port or speaker output; use a compatible input or preamp.</p>
+<details><summary>What will it sound like?</summary><p>A piezo sensor may capture knocks, rubbing, movement, and other structure-borne vibrations. It will not automatically identify an insect, and it does not guarantee better results in every setting. Background handling noise can be louder than the signal you want.</p></details>
+</section>
+
 <section class="panel"><h2>Bring a real recording</h2><p>Load a field recording from your own collection or a trusted sound library. It is played locally in your browser.</p><input id="audioFile" type="file" accept="audio/*" aria-label="Choose an audio recording"><p id="fileName" class="muted" aria-live="polite">No recording selected.</p><audio id="player" controls preload="none" hidden></audio><p class="muted">Keep source, species identification, date, location, recorder, and license information with each recording.</p></section>
 <section class="panel" style="margin-top:1rem"><h2>Listen to your surroundings</h2><p>Use your device microphone as a live listening input. This is ambient audio, not a specialized insect detector; ordinary microphones may miss ultrasound and substrate vibrations.</p><div class="live"><div><div class="status"><span class="dot" id="dot"></span><span id="status" aria-live="polite">Microphone is off</span></div><div class="controls"><button id="start" class="primary">Start live microphone</button><button id="stop" class="secondary" disabled>Stop</button></div><p id="help" class="muted">Your browser will request microphone permission. Use headphones to reduce feedback.</p></div><div><canvas id="scope" width="600" height="180" aria-label="Live audio waveform"></canvas><p class="muted">Live waveform · visualized on this device only</p></div></div></section>
 <section style="margin-top:2rem"><h2>Curious minds ask…</h2><details><summary>Can insects really make sounds?</summary><p>Yes. Depending on species, sounds can be made by rubbing body parts together, wing movement, drumming, or other mechanisms. Many arthropods also sense vibrations rather than airborne sound.</p></details><details><summary>Why use real recordings?</summary><p>Real recordings preserve the texture and variation of animal behavior. Synthetic tones test the exhibit but should never be presented as a species' actual call.</p></details><details><summary>Can we add live insect sensors later?</summary><p>Yes. A future version could connect a contact microphone, piezo sensor, or ultrasonic detector to a small computer and stream authorized sensor output to this page.</p></details></section>
