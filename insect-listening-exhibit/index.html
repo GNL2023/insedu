@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#173b2d"><title>Small Sounds — Insect Listening Exhibit</title>
+<style>
+:root{--forest:#173b2d;--leaf:#53795b;--lime:#d5e6a5;--cream:#f7f4e9;--ink:#1d2b22;--muted:#657168;--rust:#b45e3c;--line:#d8ddcf}
+*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font:16px/1.5 system-ui,sans-serif}
+header{background:var(--forest);color:white;padding:clamp(1.5rem,6vw,4rem) max(1rem,calc((100vw - 1080px)/2))}
+.kicker{text-transform:uppercase;letter-spacing:.16em;font-size:.75rem;color:var(--lime);font-weight:800}
+h1{font-size:clamp(2.8rem,8vw,5.8rem);line-height:.95;letter-spacing:-.055em;margin:.7rem 0 1rem}header p{max-width:660px;color:#e4eadf;font-size:1.1rem}
+main{max-width:1080px;margin:auto;padding:2rem 1rem 4rem}.intro{display:grid;grid-template-columns:1.3fr .7fr;gap:1rem;margin-bottom:2rem}
+.panel,.sound-card{background:#fffdf6;border:1px solid var(--line);border-radius:16px;padding:1.2rem}
+h2{font-size:1.55rem;line-height:1.15;margin:.1rem 0 .7rem;letter-spacing:-.025em}h3{margin:.2rem 0 .4rem}.muted{color:var(--muted);font-size:.92rem}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin:1rem 0 2rem}.sound-card{display:flex;flex-direction:column;min-height:245px}
+.illustration{height:78px;border-radius:12px;background:#e8eddc;display:grid;place-items:center;font-size:2.8rem;margin-bottom:.9rem}.sound-card p{font-size:.9rem;color:var(--muted);flex:1}
+button{font:inherit;font-weight:750;border:0;border-radius:999px;padding:.7rem 1rem;cursor:pointer}.primary{background:var(--forest);color:white}.secondary{background:#e8eddc;color:var(--forest)}button:disabled{opacity:.45;cursor:not-allowed}
+button:focus-visible,input:focus-visible{outline:3px solid var(--rust);outline-offset:3px}.controls{display:flex;flex-wrap:wrap;gap:.6rem;margin:.8rem 0}
+.live{display:grid;grid-template-columns:1fr 1fr;gap:1rem}.status{display:flex;align-items:center;gap:.5rem;font-size:.9rem;font-weight:750}.dot{width:9px;height:9px;background:#7a887c;border-radius:50%}.dot.on{background:var(--rust)}
+canvas{display:block;width:100%;height:100px;background:#edf0e6;border-radius:10px;margin:.8rem 0}audio{width:100%;margin-top:.8rem}
+details{border-top:1px solid var(--line);padding:.8rem 0}summary{font-weight:750;cursor:pointer}.note{border-left:4px solid var(--rust);padding:.7rem .9rem;background:#fff6ed}
+footer{background:#e9eddf;padding:1.5rem max(1rem,calc((100vw - 1080px)/2));font-size:.9rem;color:#465449}a{color:#245b43}
+@media(max-width:800px){.grid{grid-template-columns:repeat(2,1fr)}.intro,.live{grid-template-columns:1fr}}@media(max-width:460px){.grid{grid-template-columns:1fr}.sound-card{min-height:0}}
+</style></head>
+<body>
+<header><div class="kicker">A listening field guide · Family edition</div><h1>Small Sounds</h1><p>Pause, listen, and discover the busy acoustic lives of insects and other tiny neighbors. Some sounds are easy to hear; others need a microphone or vibration sensor.</p></header>
+<main>
+<section class="intro"><div><h2>Welcome to the hidden soundscape</h2><p>Choose a listening station, then try the live microphone to hear the world around you. Demo tones on this starter page are <strong>synthetic demonstrations</strong>, not authentic animal recordings.</p><p class="muted">Headphones recommended. Microphone access requires permission and generally works on HTTPS or localhost.</p></div><aside class="panel"><h2>How to explore</h2><p><b>1.</b> Play a demo station.</p><p><b>2.</b> Load a real recording from your device.</p><p><b>3.</b> Start the microphone and compare what you hear.</p><p class="muted">Live microphone audio stays in your browser; this demo does not upload or save it.</p></aside></section>
+<h2>Listening stations</h2><div class="grid">
+<article class="sound-card"><div class="illustration" aria-hidden="true">🦗</div><h3>Cricket chorus</h3><p>Many crickets make sound by rubbing body parts together. Their calls vary with species and conditions.</p><button class="primary demo" data-kind="cricket">▶ Play demo</button></article>
+<article class="sound-card"><div class="illustration" aria-hidden="true">🐝</div><h3>Bee buzz</h3><p>Wingbeats create a familiar buzz. Some bees also vibrate flowers to help release pollen.</p><button class="primary demo" data-kind="bee">▶ Play demo</button></article>
+<article class="sound-card"><div class="illustration" aria-hidden="true">🪲</div><h3>Beetle clicks</h3><p>Some insects produce clicks, squeaks, or other signals. Recording method and species matter.</p><button class="primary demo" data-kind="beetle">▶ Play demo</button></article>
+<article class="sound-card"><div class="illustration" aria-hidden="true">🍃</div><h3>Leaf-level listening</h3><p>Feeding and movement may create tiny sounds. Contact microphones can reveal subtle vibrations.</p><button class="primary demo" data-kind="leaf">▶ Play demo</button></article>
+</div>
+<section class="panel"><h2>Bring a real recording</h2><p>Load a field recording from your own collection or a trusted sound library. It is played locally in your browser.</p><input id="audioFile" type="file" accept="audio/*" aria-label="Choose an audio recording"><p id="fileName" class="muted" aria-live="polite">No recording selected.</p><audio id="player" controls preload="none" hidden></audio><p class="muted">Keep source, species identification, date, location, recorder, and license information with each recording.</p></section>
+<section class="panel" style="margin-top:1rem"><h2>Listen to your surroundings</h2><p>Use your device microphone as a live listening input. This is ambient audio, not a specialized insect detector; ordinary microphones may miss ultrasound and substrate vibrations.</p><div class="live"><div><div class="status"><span class="dot" id="dot"></span><span id="status" aria-live="polite">Microphone is off</span></div><div class="controls"><button id="start" class="primary">Start live microphone</button><button id="stop" class="secondary" disabled>Stop</button></div><p id="help" class="muted">Your browser will request microphone permission. Use headphones to reduce feedback.</p></div><div><canvas id="scope" width="600" height="180" aria-label="Live audio waveform"></canvas><p class="muted">Live waveform · visualized on this device only</p></div></div></section>
+<section style="margin-top:2rem"><h2>Curious minds ask…</h2><details><summary>Can insects really make sounds?</summary><p>Yes. Depending on species, sounds can be made by rubbing body parts together, wing movement, drumming, or other mechanisms. Many arthropods also sense vibrations rather than airborne sound.</p></details><details><summary>Why use real recordings?</summary><p>Real recordings preserve the texture and variation of animal behavior. Synthetic tones test the exhibit but should never be presented as a species' actual call.</p></details><details><summary>Can we add live insect sensors later?</summary><p>Yes. A future version could connect a contact microphone, piezo sensor, or ultrasonic detector to a small computer and stream authorized sensor output to this page.</p></details></section>
+<p class="note"><b>Science note:</b> This is a functional interface prototype. It includes generated demo tones, local playback for real recordings, and live microphone monitoring. It does not yet connect to a remote insect-monitoring station.</p>
+</main>
+<footer><b>Small Sounds</b> · Independent educational prototype inspired by the interaction pattern of Orcasound’s Ocean Listening Exhibit. See <a href="https://github.com/orcasound/orcabooth" target="_blank" rel="noreferrer">Orcabooth</a> and the <a href="https://www.orcasound.net/portfolio/ocean-listening-exhibit/" target="_blank" rel="noreferrer">original exhibit</a>.</footer>
+<script src="app.js"></script></body></html>
