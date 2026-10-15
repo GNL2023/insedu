@@ -19,6 +19,25 @@ button:focus-visible,input:focus-visible{outline:3px solid var(--rust);outline-o
 .live{display:grid;grid-template-columns:1fr 1fr;gap:1rem}.status{display:flex;align-items:center;gap:.5rem;font-size:.9rem;font-weight:750}.dot{width:9px;height:9px;background:#7a887c;border-radius:50%}.dot.on{background:var(--rust)}
 canvas{display:block;width:100%;height:100px;background:#edf0e6;border-radius:10px;margin:.8rem 0}audio{width:100%;margin-top:.8rem}
 details{border-top:1px solid var(--line);padding:.8rem 0}summary{font-weight:750;cursor:pointer}.note{border-left:4px solid var(--rust);padding:.7rem .9rem;background:#fff6ed}
+
+/* Visual DIY contact-mic lab */
+.diy-lab{margin:1.5rem 0 2rem;border:1px solid var(--line);border-radius:22px;overflow:hidden;background:#fffdf6}
+.diy-hero{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:1rem;padding:clamp(1.2rem,4vw,2.5rem);background:var(--forest);color:white}
+.diy-hero .kicker{color:var(--lime)}.diy-hero h2{font-size:clamp(2rem,4.4vw,3.2rem);margin:.45rem 0 .8rem}.diy-hero p{color:#e4eadf}
+.price-pill{display:inline-block;margin-top:.7rem;padding:.45rem .75rem;border-radius:999px;background:var(--lime);color:var(--forest);font-weight:800;font-size:.9rem}
+.hero-sketch{height:175px;position:relative;overflow:hidden;background:#244b39;border-radius:16px}.hero-sketch small{position:absolute;top:12px;left:14px;color:var(--lime);font-weight:800;letter-spacing:.12em;font-size:.65rem}
+.twig{position:absolute;left:4%;top:70%;width:80%;height:17px;background:#bd9667;border-radius:50%;transform:rotate(-7deg)}.leaf{position:absolute;width:48px;height:25px;background:#d5e6a5;border:2px solid #53795b;border-radius:100% 0 100% 0}.l1{left:23%;top:36%;transform:rotate(20deg)}.l2{left:40%;top:50%;transform:rotate(-35deg)}
+.piezo{position:absolute;left:45%;top:54%;width:53px;height:53px;border:4px solid #d5e6a5;border-radius:50%;background:#f7f4e9;display:grid;place-items:center;box-shadow:0 0 0 6px #53795b}.piezo span{width:18px;height:18px;border-radius:50%;background:#b45e3c}.wire{position:absolute;left:61%;top:68%;width:30%;height:7px;background:#d5e6a5;border-radius:8px;transform:rotate(18deg)}.plug{position:absolute;right:5%;bottom:17%;width:22px;height:18px;background:#b45e3c;border-radius:4px}.vibes{position:absolute;left:60%;top:27%;color:#d5e6a5;font-size:2rem;letter-spacing:.12em}
+.diy-content{padding:clamp(1rem,3vw,2rem)}.section-heading{display:flex;gap:.85rem;margin:1.5rem 0 .9rem}.section-heading h3{font-size:1.25rem;margin:0 0 .25rem}.section-heading p{margin:.15rem 0}.step-number{flex:0 0 2.25rem;height:2.25rem;display:grid;place-items:center;border-radius:50%;background:var(--lime);color:var(--forest);font-weight:900}
+.signal-flow{display:grid;grid-template-columns:1fr auto 1fr auto 1fr auto 1fr;align-items:center;gap:.5rem;padding:1rem;background:#f0f3e8;border-radius:16px;text-align:center}.signal-flow b,.signal-flow small{display:block}.signal-flow b{font-size:.9rem}.signal-flow small{font-size:.75rem;color:var(--muted)}.flow-icon{display:block;font-size:2rem;margin-bottom:.2rem}.signal-flow>strong{color:var(--rust);font-size:1.3rem}
+.shopping-list{display:grid;gap:.65rem}.shopping-item{display:grid;grid-template-columns:70px 1fr auto;align-items:center;gap:.9rem;padding:.8rem;border:1px solid var(--line);border-radius:14px;background:#fff}.item-visual{height:62px;display:grid;place-items:center;background:#edf0e6;border-radius:10px;font-size:2.2rem;color:var(--forest)}.item-copy b{display:block}.item-copy p{margin:.2rem 0;font-size:.88rem;color:var(--muted)}.item-copy a,.resource-links a{font-size:.88rem}.item-price{white-space:nowrap;color:var(--forest)}
+.budget-total{display:flex;justify-content:space-between;align-items:center;gap:1rem;margin-top:.75rem;padding:1rem;border-radius:14px;background:var(--forest);color:white}.budget-total small{display:block;color:#dbe5d8;font-size:.78rem;margin-top:.2rem}.budget-total strong{font-size:clamp(1.2rem,3vw,1.7rem);white-space:nowrap;color:var(--lime)}
+.build-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.75rem}.build-card,.example-card{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff}.build-art,.example-art{height:100px;display:flex;align-items:center;justify-content:center;gap:.4rem;background:#edf0e6;font-size:2.5rem}.build-art i{font-style:normal;color:var(--rust)}.build-card>b,.build-card>p,.example-card>b,.example-card>p{display:block;margin-left:.85rem;margin-right:.85rem}.build-card>b,.example-card>b{margin-top:.8rem}.build-card>p,.example-card>p{font-size:.87rem;color:var(--muted);margin-bottom:.9rem}
+.example-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem}.leaf-art{background:#e7efd8}.wood-art{background:#f4e5ce}.garden-art{background:#e7eddf}.resource-links{margin:1rem 0;padding:1rem;border-radius:12px;background:#edf0e6;font-size:.92rem}.diy-lab .note{margin-top:1rem}
+@media(max-width:800px){.diy-hero{grid-template-columns:1fr}.hero-sketch{height:150px}.build-grid{grid-template-columns:repeat(2,1fr)}.signal-flow{gap:.25rem}.signal-flow small{font-size:.68rem}}
+@media(max-width:520px){.signal-flow{grid-template-columns:1fr 1fr;gap:.75rem}.signal-flow>strong{display:none}.shopping-item{grid-template-columns:55px 1fr}.item-visual{height:55px;font-size:1.8rem}.item-price{grid-column:2;justify-self:start}.build-grid,.example-grid{grid-template-columns:1fr 1fr}.budget-total{align-items:flex-start;flex-direction:column}.diy-content{padding:1rem}}
+@media(max-width:360px){.build-grid,.example-grid{grid-template-columns:1fr}}
+
 footer{background:#e9eddf;padding:1.5rem max(1rem,calc((100vw - 1080px)/2));font-size:.9rem;color:#465449}a{color:#245b43}
 @media(max-width:800px){.grid{grid-template-columns:repeat(2,1fr)}.intro,.live{grid-template-columns:1fr}}@media(max-width:460px){.grid{grid-template-columns:1fr}.sound-card{min-height:0}}
 </style></head>
@@ -33,37 +52,36 @@ footer{background:#e9eddf;padding:1.5rem max(1rem,calc((100vw - 1080px)/2));font
 <article class="sound-card"><div class="illustration" aria-hidden="true">🍃</div><h3>Leaf-level listening</h3><p>Feeding and movement may create tiny sounds. Contact microphones can reveal subtle vibrations.</p><button class="primary demo" data-kind="leaf">▶ Play demo</button></article>
 </div>
 
-<section class="panel" style="margin-top:1rem" id="diy-contact-mic">
-<h2>DIY lab: build a contact microphone</h2>
-<p>A contact microphone picks up vibrations moving through a solid surface. It can help reveal tiny taps and scrapes that an ordinary air microphone may miss. This guide is a beginner-friendly prototype, not a calibrated insect detector.</p>
-<div class="live">
-<div>
-<h3>What you need</h3>
-<ul>
-<li>One piezo disc sensor (about 20–35 mm)</li>
-<li>Two-conductor shielded cable</li>
-<li>A compatible high-impedance audio input, recorder, or piezo preamp</li>
-<li>Insulating tape or heat-shrink tubing and a small plastic enclosure</li>
-<li>A soft elastic band or removable putty to hold the sensor against a surface</li>
-</ul>
-<p class="muted">For the easiest setup, use a ready-made piezo contact microphone or a piezo preamp with a suitable cable. Input connectors vary; check the recorder/interface instructions before connecting bare wires.</p>
+<section class="diy-lab" id="diy-contact-mic">
+<div class="diy-hero"><div><div class="kicker">Build it · Hear the hidden</div><h2>DIY contact mic lab</h2><p>Turn tiny vibrations into sound. A piezo disc can pick up taps and scrapes traveling through a solid surface—things a normal air microphone may miss.</p><span class="price-pill">Starter parts: about $19–$28*</span></div><div class="hero-sketch" role="img" aria-label="Piezo contact microphone gently touching a twig"><div class="twig"></div><div class="leaf l1"></div><div class="leaf l2"></div><div class="piezo"><span></span></div><div class="wire"></div><div class="plug"></div><div class="vibes">)))</div><small>SURFACE VIBRATIONS</small></div></div>
+<div class="diy-content">
+<div class="section-heading"><span class="step-number">01</span><div><h3>How it works</h3><p class="muted">The sensor converts vibration in an object into a small electrical signal. A compatible audio input lets you hear or record it.</p></div></div>
+<div class="signal-flow"><div><span class="flow-icon">🌿</span><b>Surface</b><small>tap or movement</small></div><strong>→</strong><div><span class="flow-icon">◉</span><b>Piezo disc</b><small>vibration to signal</small></div><strong>→</strong><div><span class="flow-icon">🎚️</span><b>Audio input</b><small>compatible input / preamp</small></div><strong>→</strong><div><span class="flow-icon">🎧</span><b>Listen</b><small>headphones / recording</small></div></div>
+<div class="section-heading"><span class="step-number">02</span><div><h3>Shopping list under $50</h3><p class="muted">Estimated USD prices before shipping. This starter budget assumes you already have a phone/computer, a compatible audio input, and basic hand tools.</p></div></div>
+<div class="shopping-list">
+<div class="shopping-item"><div class="item-visual">◉</div><div class="item-copy"><b>Wired piezo disc, 20–35 mm</b><p>Choose one with leads already attached so you don't need to solder directly to the fragile disc.</p><a href="https://metalmarshmallow.com/product.php?product_id=25" target="_blank" rel="noreferrer">Example: 20 mm piezo disc — listed at $2.50</a></div><strong class="item-price">$2.50</strong></div>
+<div class="shopping-item"><div class="item-visual">〰</div><div class="item-copy"><b>Shielded cable + matching plug</b><p>Match the plug to your recorder or preamp input; use shielded cable to reduce electrical noise.</p><a href="https://zachpoff.com/resources/building-contact-mics/" target="_blank" rel="noreferrer">See a real cable and wiring build</a></div><strong class="item-price">$8–12</strong></div>
+<div class="shopping-item"><div class="item-visual">▣</div><div class="item-copy"><b>Insulation + small enclosure</b><p>Heat-shrink or electrical tape, plus a reused bottle cap or small plastic case to protect the connections.</p></div><strong class="item-price">$5–8</strong></div>
+<div class="shopping-item"><div class="item-visual">⌁</div><div class="item-copy"><b>Soft band or removable putty</b><p>Gently hold the sensor against the surface. Reuse household elastic or putty if available.</p></div><strong class="item-price">$3–5</strong></div>
 </div>
-<div>
-<h3>Build and test</h3>
-<ol>
-<li>Connect the piezo disc’s two terminals to the cable’s signal conductor and ground/shield, following the sensor and input-device instructions.</li>
-<li>Insulate each connection so the terminals cannot touch each other, then secure the disc and cable in a small enclosure to reduce strain.</li>
-<li>Connect it to a compatible high-impedance input. Start with the input gain low and raise it gradually.</li>
-<li>Gently press the sensor against a dry twig, fallen leaf, or wooden surface. Tap the surface lightly and listen through headphones.</li>
-</ol>
+<div class="budget-total"><div><b>Estimated parts total</b><small>*Before shipping; reuse household materials where possible.</small></div><strong>$18.50–$27.50</strong></div>
+<p class="note"><b>Budget reality check:</b> This does not include a soldering iron, recorder, USB audio interface, or piezo preamp. A bare piezo disc will not work reliably with every phone or laptop input. Check your device's input requirements first; buying an interface too may push the total over $50.</p>
+<div class="section-heading"><span class="step-number">03</span><div><h3>Build it in four steps</h3><p class="muted">Start on everyday objects before trying outdoor recordings.</p></div></div>
+<div class="build-grid">
+<article class="build-card"><div class="build-art"><span>◉</span><i>〰</i></div><b>1. Start with a wired disc</b><p>Pre-attached leads make the first build easier and reduce the risk of damaging the sensor.</p></article>
+<article class="build-card"><div class="build-art"><span>🔌</span></div><b>2. Connect and insulate</b><p>Follow the sensor and input instructions. Insulate each connection separately so wires cannot touch.</p></article>
+<article class="build-card"><div class="build-art"><span>🌱</span><span>◉</span></div><b>3. Attach gently</b><p>Use a soft band or removable putty on a fallen leaf, dry twig, cardboard, or wooden surface.</p></article>
+<article class="build-card"><div class="build-art"><span>🎧</span><span>〰</span></div><b>4. Listen at low gain</b><p>Tap lightly and raise input gain gradually to avoid loud pops or clipping.</p></article>
 </div>
+<div class="section-heading"><span class="step-number">04</span><div><h3>Real-world listening challenges</h3><p class="muted">Record these examples yourself. The results depend on the surface and setup; do not label them insect calls without evidence.</p></div></div>
+<div class="example-grid">
+<article class="example-card"><div class="example-art leaf-art">🍃　〰</div><b>Fallen leaf or dry stem</b><p>Try a gentle tap and light rubbing. Compare how a dry leaf and firm twig carry vibrations.</p></article>
+<article class="example-card"><div class="example-art wood-art">🪵　◉</div><b>Wood, cardboard, paper cup</b><p>Tap each item with the same fingertip. Compare resonance, pitch, and handling noise.</p></article>
+<article class="example-card"><div class="example-art garden-art">🌰　〰</div><b>Dry seed pod or bark</b><p>Try a very light touch on a fallen pod or loose bark. Avoid damaging living plants or disturbing wildlife.</p></article>
 </div>
-<h3>Try this listening experiment</h3>
-<p>Compare a dry twig, a piece of cardboard, and a wooden table. Keep the sensor position and gain similar. Which surface carries the clearest vibration? Record your observations, and label them as your own test sounds—not insect calls.</p>
-<p class="note"><b>Care and safety:</b> Do not pierce, cut, or tightly clamp living plants, disturb insects, or attach the sensor to an animal. Keep electronics dry. Never connect bare piezo wires to an unknown port or speaker output; use a compatible input or preamp.</p>
-<details><summary>What will it sound like?</summary><p>A piezo sensor may capture knocks, rubbing, movement, and other structure-borne vibrations. It will not automatically identify an insect, and it does not guarantee better results in every setting. Background handling noise can be louder than the signal you want.</p></details>
-</section>
-
+<div class="resource-links"><b>Real build references:</b> <a href="https://zachpoff.com/resources/building-contact-mics/" target="_blank" rel="noreferrer">Zach Poff's durable contact-mic guide</a> and <a href="https://makezine.com/projects/piezo-contact-mic/" target="_blank" rel="noreferrer">Make: Magazine's piezo contact-mic project</a> show actual hardware and wiring approaches.</div>
+<p class="note"><b>Care and safety:</b> Keep electronics dry, insulate exposed conductors, and never connect bare wires to an unknown port or speaker output. Do not attach sensors to insects or animals, pierce living plants, or tightly clamp stems. A contact mic detects structure-borne vibration; it does not identify a species.</p>
+</div></section>
 <section class="panel"><h2>Bring a real recording</h2><p>Load a field recording from your own collection or a trusted sound library. It is played locally in your browser.</p><input id="audioFile" type="file" accept="audio/*" aria-label="Choose an audio recording"><p id="fileName" class="muted" aria-live="polite">No recording selected.</p><audio id="player" controls preload="none" hidden></audio><p class="muted">Keep source, species identification, date, location, recorder, and license information with each recording.</p></section>
 <section class="panel" style="margin-top:1rem"><h2>Listen to your surroundings</h2><p>Use your device microphone as a live listening input. This is ambient audio, not a specialized insect detector; ordinary microphones may miss ultrasound and substrate vibrations.</p><div class="live"><div><div class="status"><span class="dot" id="dot"></span><span id="status" aria-live="polite">Microphone is off</span></div><div class="controls"><button id="start" class="primary">Start live microphone</button><button id="stop" class="secondary" disabled>Stop</button></div><p id="help" class="muted">Your browser will request microphone permission. Use headphones to reduce feedback.</p></div><div><canvas id="scope" width="600" height="180" aria-label="Live audio waveform"></canvas><p class="muted">Live waveform · visualized on this device only</p></div></div></section>
 <section style="margin-top:2rem"><h2>Curious minds ask…</h2><details><summary>Can insects really make sounds?</summary><p>Yes. Depending on species, sounds can be made by rubbing body parts together, wing movement, drumming, or other mechanisms. Many arthropods also sense vibrations rather than airborne sound.</p></details><details><summary>Why use real recordings?</summary><p>Real recordings preserve the texture and variation of animal behavior. Synthetic tones test the exhibit but should never be presented as a species' actual call.</p></details><details><summary>Can we add live insect sensors later?</summary><p>Yes. A future version could connect a contact microphone, piezo sensor, or ultrasonic detector to a small computer and stream authorized sensor output to this page.</p></details></section>
